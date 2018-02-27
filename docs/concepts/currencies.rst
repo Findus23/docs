@@ -4,7 +4,7 @@
 Currencies
 ==========
 
-Firefly III supports as many currencies as you like. By default it ships with a variety of currencies, amongst which also crypto currencies, which Firefly III also supports.
+Firefly III supports as many currencies as you like. By default, it ships with a variety of currencies, amongst which also crypto currencies, which Firefly III also supports.
 
 You can add your own currencies if you're missing one.
 
@@ -40,25 +40,25 @@ Screenshots
 
 .. figure:: https://firefly-iii.org/static/docs/4.7.0/currency-create.png
    :alt: Create currency
-   
+
    This screen allows you to create a new currency. Pretty straight-forward.
 
 .. figure:: https://firefly-iii.org/static/docs/4.7.0/currency-default.png
    :alt: Default currency
-   
+
    In this instance of Firefly III, the default currency is the British Pound.
 
 .. figure:: https://firefly-iii.org/static/docs/4.7.0/currency-asset.png
    :alt: Asset currency
-   
+
    Each account has its own default currency.
 
 .. figure:: https://firefly-iii.org/static/docs/4.7.0/currency-withdrawal.png
    :alt: Foreign withdrawal
-   
+
    When you withdraw an amount in a "foreign" currency, Firefly III needs to know the amount in the native currency. Firefly III will suggest the amount based on current exchange rates.
 
 .. figure:: https://firefly-iii.org/static/docs/4.7.0/currency-transfer.png
    :alt: Foreign transfer
-   
-   Likewise when you transfer money between two asset accounts, both currencies must have a monetary value. Firefly III will suggest the amount based on current exchange rates.
+
+   Likewise, when you transfer money between two asset accounts, both currencies must have a monetary value. Firefly III will suggest the amount based on current exchange rates.

@@ -56,13 +56,13 @@ I want to use SQLite?
 There is not much to it. Open your ``.env`` file and find the lines that begin with ``DB_``. These define your database connection. Leave ``DB_CONNECTION``. Delete the rest.
 
 .. code-block:: bash
-   
+
    DB_CONNECTION=sqlite
 
 Then, in order to install the database, make sure the file ``/storage/database/database.sqlite`` exists. When it does not exist, you can use this command on Linux to create it:
 
 .. code-block:: bash
-   
+
    touch ./storage/database/database.sqlite
 
 Then you are ready to install the database in SQLite:
@@ -91,7 +91,7 @@ Then you are ready to install the database in PostgreSQL:
 I see a white page and nothing else?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Check out the log files in ``storage/logs`` to see what is going on. Please open a ticker if you are not sure what to do. If the logs are empty  Firefly III cannot write to them. Make sure that the web server has write access to this directory. If the logs still remain empty, do you have a the ``vendor`` directory in your Firefly III root? If not, run the Composer commands.
+Check out the log files in ``storage/logs`` to see what is going on. Please open a ticker if you are not sure what to do. If the logs are empty  Firefly III cannot write to them. Make sure that the web server has write access to this directory. If the logs still remain empty, do you have a ``vendor`` directory in your Firefly III root? If not, run the Composer commands.
 
 I get a 404?
 ~~~~~~~~~~~~
@@ -105,7 +105,7 @@ You will see the text ``AllowOverride None`` right below it. Change it to ``Allo
 Also run the following commands:
 
 .. code-block:: bash
-   
+
    sudo a2enmod rewrite
    sudo service apache2 restart
 
@@ -149,11 +149,11 @@ Firefly III requires PHP 7.1 or higher.
 I get 'BCMath' errors?
 ~~~~~~~~~~~~~~~~~~~~~~
 
-You see stuff like this: 
+You see stuff like this:
 
 .. code-block:: bash
-   
-   PHP message: PHP Fatal error: Call to undefined function 
+
+   PHP message: PHP Fatal error: Call to undefined function
    FireflyIII\Http\Controllers\bcscale() in
    firefly-iii/app/Http/Controllers/HomeController.php on line 76
 
@@ -166,8 +166,8 @@ I get 'intl' errors?
 Errors such as these:
 
 .. code-block:: bash
-   
-   production.ERROR: exception 
+
+   production.ERROR: exception
    'Symfony\Component\Debug\Exception\FatalErrorException' with message
    'Call to undefined function FireflyIII\Http\Controllers\numfmt_create()'
    in firefly-iii/app/Http/Controllers/Controller.php:55
@@ -180,7 +180,7 @@ I get 'Error: Call to undefined function ctype_alpha()'?
 This may happen when you are on a NAS4free Debian installation or similar platform. This command may help:
 
 .. code-block:: bash
-   
+
    pkg install php71-ctype
 
 I get 'Error: could not open input file artisan'?
@@ -211,7 +211,7 @@ I'm getting prompted by Salt Edge to request test access. Am I doing it wrong?
 
 `Salt Edge <https://www.saltedge.com/>`_ doesn't just let you import data. Once you have created an account and set up Firefly III to import data from their systems you can only import test data at first. You'll have `to contact them <https://www.saltedge.com/test_access>`_ to get your account upgraded.
 
-This is a bit annoying, having to jump through hoops to get Salt Edge access, but it's the best I can do. Since Firefly III is open source software I cannot share my secret keys. They would be out on the street. So, each user has to get their own access to Salt Edge.
+This is a bit annoying, having to jump through hoops to get Salt Edge access, but it's the best I can do. Since Firefly III is open source software, I cannot share my secret keys. They would be out on the street. So, each user has to get their own access to Salt Edge.
 
 Other questions
 ---------------
@@ -222,14 +222,14 @@ I keep getting redirected to the index after editing something
 If you're running Firefly III in a reverse proxy environment, please check if you have the following configuration:
 
 .. code-block:: bash
-   
-   Referrer-Policy: strict-origin 
+
+   Referrer-Policy: strict-origin
 
 
 If this is the case, please change it to:
 
 .. code-block:: bash
-   
+
    Referrer-Policy: same-origin
 
 That should solve it.

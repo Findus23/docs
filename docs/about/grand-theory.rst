@@ -4,9 +4,9 @@
 The grand theory
 ================
 
-This is a description of how Firefly III works. The "grand theory". 
+This is a description of how Firefly III works. The "grand theory".
 
-Firefly III has been built around how I manage my finances. Please read this carefully so we match on how to do things.
+Firefly III has been built around how I manage my finances. Please read this carefully, so we match on how to do things.
 
 The general idea
 ----------------
@@ -22,7 +22,7 @@ The first thing I did was simple: I started living from the first day of the mon
 
 So if you get paid on the 23rd of the month, your salary sits in your savings account from the 23rd until the first day of the next month, when you move (part of it) back to your checking account. If you get paid every week, this routine repeats weekly.
 
-This is quite difficult the first few times, but after a while you'll notice that you have (pretty effectively) moved your routine away from your salary and income. This alone gives you great financial stability. 
+This is quite difficult the first few times, but after a while you'll notice that you have (pretty effectively) moved your routine away from your salary and income. This alone gives you great financial stability.
 
 This procedure allowed me to program a very simple tool (the original "Firefly") which held very simple things: transactions. Oh and some accounts to keep track of the money. But that was basically it. It showed me where my money went.
 

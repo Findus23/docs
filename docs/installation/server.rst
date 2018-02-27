@@ -5,7 +5,7 @@ Self-hosted server
 .. contents::
    :local:
 
-If you have your own (virtual) web server you can use this guide to install Firefly III. You will some ingredients prepared already.
+If you have your own (virtual) web server, you can use this guide to install Firefly III. You will some ingredients prepared already.
 
 Ingredients
 -----------
@@ -63,7 +63,7 @@ Main command
 
 Browse to ``/var/www`` which is probably the directory where your web server is configured to find its files.
 
-Enter the following command. 
+Enter the following command.
 
 .. code-block:: bash
 
@@ -85,7 +85,7 @@ Initialize the database
 This step is very important, because Firefly III needs a database to work with and it will tell you whether or not your configuration is correct. Run the following command in the Firefly III directory.
 
 .. code-block:: bash
-   
+
    php artisan migrate:refresh --seed
 
 Now you should be able to visit `http://localhost/firefly-iii/ <http://localhost/firefly-iii/public>`_ and see Firefly III.

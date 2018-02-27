@@ -12,7 +12,7 @@ Docker
 
 Upgrade straight from Docker Hub
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-To upgrade, stop your container using 
+To upgrade, stop your container using
 
 .. code-block:: bash
 
@@ -71,23 +71,23 @@ Created using composer "create-project"
 The best way to upgrade is to "reinstall" Firefly III using the following command:
 
 .. code-block:: bash
-   
+
    composer create-project grumpydictator/firefly-iii --no-dev --prefer-dist firefly-iii-updated <next_version>
 
 Where ``<next_version>`` is the latest version of Firefly III. This installs Firefly III in a new directory called ``firefly-iii-updated``. Assuming your *original* Firefly III installation is in the directory ``firefly-iii`` you can upgrade by simply moving over your ``.env`` file and other stuff:
 
 .. code-block:: bash
-   
+
    cp firefly-iii/.env firefly-iii-updated/.env
    cp firefly-iii/storage/upload/* firefly-iii-updated/storage/upload/
    cp firefly-iii/storage/export/* firefly-iii-updated/storage/export/
 
-If you use SQLite as a database system (you will know if you do) copy your database as well. Otherwise the ``.env``-file is enough.
+If you use SQLite as a database system (you will know if you do) copy your database as well. Otherwise, the ``.env``-file is enough.
 
 Then, run the following commands to finish the upgrade:
 
 .. code-block:: bash
-   
+
    cd firefly-iii-updated
    rm -rf bootstrap/cache/*
    php artisan migrate --env=production # Answer yes when asked.
@@ -99,21 +99,21 @@ Then, run the following commands to finish the upgrade:
 To make sure your webserver serves you the new Firefly III:
 
 .. code-block:: bash
-   
+
    mv firefly-iii firefly-iii-old
    mv firefly-iii-updated firefly-iii
 
 If you get 500 errors or other problems, you may have to set the correct access rights:
 
 .. code-block:: bash
-   
+
    sudo chown -R www-data:www-data firefly-iii
    sudo chmod -R 775 firefly-iii/storage
 
 Make sure you remove any old PHP7.0 packages or at least, make sure they are not used by Apache and/or nginx. To disable PHP 7.0 in Apache, you can use:
 
 .. code-block:: bash
-   
+
    sudo a2dismod php7.0
    sudo a2enmod php7.1
    sudo service apache2 restart

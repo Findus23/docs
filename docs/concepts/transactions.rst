@@ -9,7 +9,7 @@ A transaction is a very simple thing. Money moves from A to B. It doesn't matter
 .. graphviz::
 
    digraph foo {
-      graph [fontname = "helvetica",bgcolor=transparent]; 
+      graph [fontname = "helvetica",bgcolor=transparent];
       node [fontname = "helvetica", fontsize=11, style=filled, shape=rounded];
       edge [fontname = "helvetica", fontsize=11];
       rankdir="LR";
@@ -22,7 +22,7 @@ A transaction is a very simple thing. Money moves from A to B. It doesn't matter
 .. graphviz::
 
    digraph foo {
-      graph [fontname = "helvetica",bgcolor=transparent]; 
+      graph [fontname = "helvetica",bgcolor=transparent];
       node [fontname = "helvetica", fontsize=11, shape=rounded, style=filled];
       edge [fontname = "helvetica", fontsize=11];
       rankdir="LR";
@@ -37,7 +37,7 @@ In Firefly III and most other systems this is stored using a "`double-entry book
 .. graphviz::
 
    digraph foo {
-      graph [fontname = "helvetica",bgcolor=transparent]; 
+      graph [fontname = "helvetica",bgcolor=transparent];
       node [fontname = "helvetica", fontsize=11, shape=rounded, style=filled];
       edge [fontname = "helvetica", fontsize=11];
       a[label="Your boss", color=orange]
@@ -52,7 +52,7 @@ In Firefly III and most other systems this is stored using a "`double-entry book
 .. graphviz::
 
    digraph foo {
-      graph [fontname = "helvetica",bgcolor=transparent]; 
+      graph [fontname = "helvetica",bgcolor=transparent];
       node [fontname = "helvetica", fontsize=11, shape=rounded, style=filled];
       edge [fontname = "helvetica", fontsize=11];
       a[label="Checking Account", color=deepskyblue]
@@ -65,7 +65,7 @@ In Firefly III and most other systems this is stored using a "`double-entry book
 
 Each transaction is stored twice. Once as a loss (for one party), and once as a profit (for the other party). This seems pretty pointless, and technically it is. But it was designed back when clerks could be fraudulent and this double-entry system stopped fraud. In these modern days it is useful to check if all records are straight.
 
-It is also useful when transferring money back and forth between your own :ref:`accounts <accounts>`. This is the same as spending money. It's all moving money around. This helps maintaining the internal consistency of the database.
+It is also useful when transferring money back and forth between your own :ref:`accounts <accounts>`. This is the same as spending money. It's all moving money around. This helps maintain the internal consistency of the database.
 
 Transactions have a few useful fields:
 
@@ -99,7 +99,7 @@ What has been described here are called "transaction journals". Firefly III stor
 
 You can verify this by counting. There are always twice as many "transactions" as there are "transaction journals" in your database.
 
-This way, Firefly III tries to stay true to what a financial transaction is, which is kind of singular. Money moves from A to B, end of story. Nothing more. 
+This way, Firefly III tries to stay true to what a financial transaction is, which is kind of singular. Money moves from A to B, end of story. Nothing more.
 
 However, often an expense tells a story. Just take grocery receipts for example. It's one expense sure, but it consists of many parts. And when you buy aspirin and bread at the same time, you might want to split the expense over two budgets, medication and groceries. A single expense would make you lose information.
 
@@ -113,20 +113,20 @@ Likewise, your salary may have multiple components. Your base salary may be 1200
          label = "Groceries\n- €4,24";
          node [fontname = "helvetica", fontsize=11, shape=rounded, style=filled];
          edge [fontname = "helvetica", fontsize=11];
-         
+
          a[label="- € 2,95", color=grey33, fontcolor=red, fontname = "helvetica bold",style=dashed, shape=ellipse];
          b[label="- € 1,29", color=grey33, fontcolor=red, fontname = "helvetica bold",style=dashed, shape=ellipse];
          c[label="Super Market", color=burlywood1];
          a -> c[label="Aspirin"];
          b -> c[label="Bread"];
     }
-      
+
    }
 
 Any time you create a deposit, transfer or a withdrawal, Firefly III allows you to **split** a transaction into multiple parts. When you do this, you can:
 
 - Assign part of an expense to a budget;
-- Assign different revenue accounts to parts of of a deposit.
+- Assign different revenue accounts to parts of a deposit.
 - Categorize money differently.
 
 You can split your entire groceries-receipt into small "sub"-transactions. You can specify each component of your salary.

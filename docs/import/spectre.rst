@@ -20,7 +20,7 @@ The Spectre API has some secrets that you must share with Firefly III in order t
 
 .. figure:: https://firefly-iii.org/static/docs/4.7.0/spectre-config.png
    :alt: Import configuration
-   
+
    The first time you try to import data some configuration is required.
 
 Once you have done so, you will be forwarded to Spectre where you can select your bank, and login. This all happens on their site, so Firefly III will not (and cannot) touch your login data.
@@ -29,26 +29,26 @@ When you are back in Firefly III, it will show you the accounts Spectre has foun
 
 .. figure:: https://firefly-iii.org/static/docs/4.7.0/spectre-accounts.png
    :alt: Account selection
-   
+
    Firefly III will ask you to make a selection
 
 After you have selected the correct accounts, Firefly III will import the data:
 
 .. figure:: https://firefly-iii.org/static/docs/4.7.0/spectre-import-running.png
    :alt: The import is running
-   
+
    The import is running
 
 .. figure:: https://firefly-iii.org/static/docs/4.7.0/spectre-import-finished.png
    :alt: The import is finished
-   
+
    Yay! The import has finished!
 
-Once this process is complete you can find the imported transactions in your administration.
+Once this process is complete, you can find the imported transactions in your administration.
 
 .. figure:: https://firefly-iii.org/static/docs/4.7.0/spectre-result.png
    :alt: Result of the import
-   
+
    The transactions are collected under a specially made tag and are available in reports.
 
 

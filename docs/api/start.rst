@@ -19,7 +19,7 @@ The "about"-end point uses a simple key-value system grouped under the data key.
 
 
 .. code-block:: json
-   
+
    {
        "data": {
            "version": "4.7.1",
@@ -36,7 +36,7 @@ Errors
 System errors are represented using the following notation. All errors are in English, regardless of the user's preferred language.
 
 .. code-block:: json
-   
+
    {
        "message": "Error message is here",
        "exception": "ErrorException",
@@ -46,10 +46,10 @@ System errors are represented using the following notation. All errors are in En
    }
 
 
-Of course, when debug is *disabled* this error will be not be very descriptive:
+Of course, when debug is *disabled* this error will not be very descriptive:
 
 .. code-block:: json
-   
+
    {
        "message": "Internal Firefly III Exception. See log files.",
        "exception": "FireflyIII\\Exceptions\\FireflyException"
@@ -59,7 +59,7 @@ Of course, when debug is *disabled* this error will be not be very descriptive:
 Validation errors (when submitting data) are formatted using the following notation. All errors are in English, regardless of the user's preferred language.
 
 .. code-block:: json
-   
+
    {
        "message": "The given data was invalid.",
        "errors": {
